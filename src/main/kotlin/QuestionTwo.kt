@@ -28,10 +28,10 @@ fun main(){
 
     if(colorfulColor.size > blackWhiteColor.size){
         val percentage = (colorfulColor.size / dataColorRGB.itemRGB.size) * 100
-        conclusion = "colorful, percentage $percentage"
+        conclusion = "colorful, percentage $percentage %"
     }else{
         val percentage = (blackWhiteColor.size / dataColorRGB.itemRGB.size) * 100
-        conclusion = "black n white, percentage $percentage"
+        conclusion = "black n white, percentage $percentage %"
     }
 
     println("==============================")
