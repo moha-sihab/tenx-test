@@ -5,7 +5,7 @@ fun main() {
     val lowerLimit =50
 
     val dataColorRGB = DataColorRGB()
-    val acceptColor : MutableList<ItemRGB> = mutableListOf()
+    val acceptedColor : MutableList<ItemRGB> = mutableListOf()
     val rejectedColor : MutableList<ItemRGB> = mutableListOf()
     dataColorRGB.itemRGB.forEach { itemRGB ->
         val rangeData = RangeDate(itemRGB.colorRange)
@@ -20,13 +20,17 @@ fun main() {
                 rejectedColor.add(itemRGB)
             }
             else{
-                acceptColor.add(itemRGB)
+                acceptedColor.add(itemRGB)
             }
         }
     }
-    println("acceptedColor=${acceptColor.joinToString { "${it.colorRange} \n" }}")
+
+    println("Accepted Color")
+    println(acceptedColor.joinToString { "${it.colorRange} \n" })
     println("======================================")
-    println("rejectedColor=${rejectedColor.joinToString { "${it.colorRange} \n" }}")
+    println("======================================")
+    println("Rejected Color")
+    println(rejectedColor.joinToString { "${it.colorRange} \n" })
 
 }
 
