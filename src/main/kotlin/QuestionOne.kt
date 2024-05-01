@@ -8,7 +8,7 @@ fun main() {
     val acceptedColor : MutableList<ItemRGB> = mutableListOf()
     val rejectedColor : MutableList<ItemRGB> = mutableListOf()
     dataColorRGB.itemRGB.forEach { itemRGB ->
-        val rangeData = RangeDate(itemRGB.colorRange)
+        val rangeData = RangeData(itemRGB.colorRange)
         if(rangeData < threshold){
             rejectedColor.add(itemRGB)
         }
@@ -25,6 +25,8 @@ fun main() {
         }
     }
 
+    println("======================================")
+    println("==============RESULT==============")
     println("Accepted Color")
     println(acceptedColor.joinToString { "${it.colorRange} \n" })
     println("======================================")
@@ -32,15 +34,6 @@ fun main() {
     println("Rejected Color")
     println(rejectedColor.joinToString { "${it.colorRange} \n" })
 
-}
-
-fun RangeDate(list: List<Int>) : Int {
-    var resultRange = 0
-    if(list.size == 3){
-        val sorted = list.sorted()
-        resultRange = sorted[2] - sorted[0]
-    }
-    return resultRange
 }
 
 fun DataColorRGB() : ColorRGB {
@@ -80,11 +73,3 @@ fun DataColorRGB() : ColorRGB {
 
     return colorRGB
 }
-
-data class ColorRGB(
-    val itemRGB : List<ItemRGB>
-)
-
-data class ItemRGB(
-    val colorRange : List<Int>
-)
