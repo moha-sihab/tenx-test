@@ -46,6 +46,7 @@ Rejected Color
 Pertanyaan nomor 2 "apakah gambar di bawah ini merupakan gambar yang colorful atau gambar yang lebih mirip dengan hitam-putih".
 
 Asumsi warna yang kurang colorful adalah jika memiliki range warna di bawah 38 atau batas bawah warna Blue di bawah 51.
+Kemudian dilakukan komparasi kelompok colorful dan hitam-putih, mana yang persentasenya lebih besar, setelah itu akan ditarik konklusi seperti contoh result di bawah ini.
 
 Untuk melakukan testing, run file QuestionTwo.kt dan check resultnya dalam format berikut :
 
